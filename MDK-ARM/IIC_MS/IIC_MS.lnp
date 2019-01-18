@@ -1,0 +1,26 @@
+--cpu Cortex-M3
+"iic_ms\startup_stm32f103xb.o"
+"iic_ms\main.o"
+"iic_ms\gpio.o"
+"iic_ms\usart.o"
+"iic_ms\stm32f1xx_it.o"
+"iic_ms\stm32f1xx_hal_msp.o"
+"iic_ms\iic_ms.o"
+"iic_ms\stm32f1xx_hal_gpio_ex.o"
+"iic_ms\stm32f1xx_hal_tim.o"
+"iic_ms\stm32f1xx_hal_tim_ex.o"
+"iic_ms\stm32f1xx_hal_uart.o"
+"iic_ms\stm32f1xx_hal.o"
+"iic_ms\stm32f1xx_hal_rcc.o"
+"iic_ms\stm32f1xx_hal_rcc_ex.o"
+"iic_ms\stm32f1xx_hal_gpio.o"
+"iic_ms\stm32f1xx_hal_dma.o"
+"iic_ms\stm32f1xx_hal_cortex.o"
+"iic_ms\stm32f1xx_hal_pwr.o"
+"iic_ms\stm32f1xx_hal_flash.o"
+"iic_ms\stm32f1xx_hal_flash_ex.o"
+"iic_ms\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "IIC_MS\IIC_MS.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "IIC_MS.map" -o IIC_MS\IIC_MS.axf
