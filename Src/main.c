@@ -122,8 +122,8 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 		//I2C_Slave_Receive(a,5,1000);
-		//I2C_Master_Transmit( 0x25,b, 5, 10);
-		//I2C_Master_Receive( 0x25,a, 5, 10);
+		//I2C_Master_Transmit( 0x25,b, 5);
+		//I2C_Master_Receive( 0x25,a, 5);
 		//I2C_Slave_Transmit(b,5,100);
       
 //		//if(I2C_Slave_Receive(a,5,100) == 0)

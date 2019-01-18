@@ -33,8 +33,8 @@ void IIC_Slave_Ack(void);   //从机发送ACK信号
 void IIC_Slave_NAck(void);  //从机发送NACK信号
 uint8_t wait_Start(void);	  
 uint8_t wait_Stop(void);	
-uint8_t I2C_Master_Transmit( uint8_t DevAddress,uint8_t *pData, uint16_t Size, uint32_t Timeout); //主机向特定从机发送数据
-uint8_t I2C_Master_Receive( uint8_t DevAddress,uint8_t *pData, uint16_t Size, uint32_t Timeout);  //主机从特定从机接收数据
+uint8_t I2C_Master_Transmit( uint8_t DevAddress,uint8_t *pData, uint16_t Size); //主机向特定从机发送数据
+uint8_t I2C_Master_Receive( uint8_t DevAddress,uint8_t *pData, uint16_t Size);  //主机从特定从机接收数据
 uint8_t I2C_Slave_Transmit( uint8_t *pData, uint16_t Size, uint32_t Timeout);  //从机发送数据      
 uint8_t I2C_Slave_Receive( uint8_t *pData, uint16_t Size, uint32_t Timeout);  //从机接收数据
 

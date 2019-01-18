@@ -131,7 +131,7 @@ uint8_t IIC_Read_Byte(unsigned char ack)       //IIC读取一个字节
 	return read_Data;
 }
 
-uint8_t I2C_Master_Transmit( uint8_t DevAddress,uint8_t *pData, uint16_t Size, uint32_t Timeout)
+uint8_t I2C_Master_Transmit( uint8_t DevAddress,uint8_t *pData, uint16_t Size)
 {
 	IIC_Start();
 	IIC_Send_Byte(DevAddress<<1);
@@ -151,7 +151,7 @@ uint8_t I2C_Master_Transmit( uint8_t DevAddress,uint8_t *pData, uint16_t Size, u
    return 0;		 
 }
 
-uint8_t I2C_Master_Receive( uint8_t DevAddress,uint8_t *pData, uint16_t Size, uint32_t Timeout)   //主机读取
+uint8_t I2C_Master_Receive( uint8_t DevAddress,uint8_t *pData, uint16_t Size)   //主机读取
 {
 	IIC_Start();
 	IIC_Send_Byte((DevAddress<<1)+1);
@@ -297,7 +297,6 @@ uint8_t IIC_Slave_Read_Byte(unsigned char ack)//IIC读取一个字节
 	else
 		IIC_Slave_Ack();
 	return read_Data;
-	
 }
 
 uint8_t wait_Start(void)
@@ -371,6 +370,7 @@ uint8_t I2C_Slave_Receive( uint8_t *pData, uint16_t Size, uint32_t Timeout)
 			
 		}
   }
+	return 1;
 }
 
 uint8_t I2C_Slave_Transmit( uint8_t *pData, uint16_t Size, uint32_t Timeout) //IIC从机发送数据
@@ -396,9 +396,9 @@ uint8_t I2C_Slave_Transmit( uint8_t *pData, uint16_t Size, uint32_t Timeout) //I
 			return 0;
 		}
 		else
-		  return 1;
-			
-		}
+		  return 1;	
+		}	
   }
+	return 1;
 }
 
